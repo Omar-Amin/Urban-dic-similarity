@@ -1,17 +1,17 @@
 public class VectorPair {
-    private int[] a;
-    private int[] b;
+    private Vector a;
+    private Vector b;
 
-    VectorPair(int[] a, int[] b){
+    VectorPair(Vector a, Vector b){
         this.a = a;
         this.b = b;
     }
 
-    public int[] getA() {
+    public Vector getA() {
         return a;
     }
 
-    public int[] getB() {
+    public Vector getB() {
         return b;
     }
 }
