@@ -1,12 +1,11 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class CosineSimilarity {
 
     CosineSimilarity() {
     }
 
+    /**
+     * Finds the cosine similarity (A.B/|A|*|B|).
+     * */
     float findSimilarity(String s1, String s2){
         Vector a,b;
         VectorPair vectors = calculateVector(s1,s2);
@@ -16,6 +15,9 @@ public class CosineSimilarity {
         return (float) ((float) dot/(a.getSize()*b.getSize()));
     }
 
+    /**
+     * Finding the dot product of two vectors.
+     * */
     private int dotProduct(Vector a, Vector b){
         int[] a1,b1;
         a1 = a.getVector();
