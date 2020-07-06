@@ -1,17 +1,18 @@
 import javafx.util.Pair;
-import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
-import kong.unirest.Unirest;
 
 public class CompareDictionaries {
 
-    // TODO: Make request for both wiki and urban
+    /**
+     * Retrieves description for a work from urban dictionary and wiktionary.
+     * */
     static Pair<String,String> getDescriptions(String word){
+        // requests the word with an API from urban dictionary and retrieves the first definition
         UrbanRequest urbanRequest = new UrbanRequest();
         JsonNode node = urbanRequest.requestWord(word);
+        String urbanDescription = node.getObject().getJSONArray("list").getJSONObject(0).get("definition").toString();
 
-        System.out.println(node);
-        return new Pair<>("","");
+        return new Pair<>(urbanDescription,"");
     }
 
     static float getSimilarity(String s1, String s2){
