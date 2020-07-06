@@ -1,9 +1,9 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
-        String s1 = "this is a sentence but similar";
-        String s2 = "not even close";
-        CompareDictionaries.getDescriptions("bitch");
+        System.out.println(Arrays.toString(CompareDictionaries.getSimilarityOfDictionaries("kanye west", 5)));
     }
 
 }
